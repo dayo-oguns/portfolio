@@ -806,3 +806,72 @@ a:-webkit-any-link {
     height: 600px;
   }
 }
+
+/* Larble featured mobile app */
+.larble-feature {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  max-width: 1160px;
+  margin: 12px auto 64px;
+  width: calc(100% - 48px);
+  overflow: hidden;
+  border: 1px solid #666bc0;
+  border-radius: 28px;
+  background: radial-gradient(ellipse at 90% 30%, #4a4ba0 0%, transparent 60%), #171c49;
+  box-shadow: 0 24px 70px #0005;
+  color: #fff;
+}
+.larble-copy { padding: 48px 0 48px 48px; position: relative; z-index: 1; }
+.larble-eyebrow { display: flex; align-items: center; gap: 16px; font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #c5c9ff; }
+.larble-eyebrow span { border: 1px solid #8b91c5; padding: 6px 10px; border-radius: 20px; font-size: 11px; letter-spacing: .3px; color: #fff; }
+.larble-logo { display: block; width: 180px; height: auto; margin: 32px 0 24px; }
+.larble-copy h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.08; letter-spacing: -1.8px; margin-bottom: 20px; }
+.larble-description { max-width: 425px; font-size: 16px; line-height: 1.75; color: #d9dcf1; }
+.larble-features { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 22px 0 30px; }
+.larble-features li { font-size: 12px; padding: 8px 11px; border-radius: 6px; background: #ffffff0d; border: 1px solid #ffffff26; color: #e1e4ff; }
+.larble-availability { font-size: 12px; color: #d9dcf1; margin-bottom: 12px; }
+.larble-downloads { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.larble-downloads a { display: inline-flex; border-radius: 8px; transition: transform .2s; }
+.larble-downloads img { display: block; width: auto; height: 46px; }
+.larble-downloads a:hover { transform: translateY(-3px); }
+.larble-feature a:focus-visible { outline: 3px solid #fff; outline-offset: 5px; }
+.larble-website { display: inline-block; margin-top: 24px; color: #e0e3ff; font-size: 14px; }
+.larble-website span { margin-left: 8px; }
+.larble-website:hover { color: #fff; text-decoration: underline; }
+.larble-showcase { position: relative; min-height: 620px; }
+.larble-orbit { position: absolute; width: 460px; height: 460px; border: 1px solid #ffffff20; border-radius: 50%; top: 90px; left: 10px; box-shadow: 0 0 0 50px #ffffff03, 0 0 0 100px #ffffff03; }
+.larble-screen { position: absolute; display: block; height: auto; border: 6px solid #171b34; border-radius: 26px; box-shadow: 0 24px 44px #0007; }
+.larble-screen-search { width: 215px; top: 65px; right: 40px; transform: rotate(8deg); }
+.larble-screen-feed { width: 240px; top: 155px; left: 20px; transform: rotate(-8deg); }
+.larble-showcase-caption { position: absolute; bottom: 36px; width: 100%; text-align: center; color: #d4d6f4; font-size: 12px; letter-spacing: 1px; }
+.larble-attribution { grid-column: 1 / -1; padding: 16px 24px; border-top: 1px solid #ffffff26; color: #d4d6f4; font-size: 12px; line-height: 1.5; text-align: center; }
+.other-projects-title { text-align: center; font-size: 23px; color: #e0e0e0; margin-bottom: 16px; }
+@media (max-width: 1000px) {
+  .larble-feature { grid-template-columns: 1fr 1fr; }
+  .larble-copy { padding: 36px 0 36px 30px; }
+  .larble-screen-search { width: 175px; right: 30px; top: 100px; }
+  .larble-screen-feed { width: 195px; left: 14px; top: 210px; }
+}
+@media (max-width: 760px) {
+  .larble-feature { grid-template-columns: 1fr; max-width: 560px; width: calc(100% - 32px); }
+  .larble-copy { padding: 30px 26px 0; }
+  .larble-copy h2 { font-size: 42px; }
+  .larble-showcase { width: 100%; max-width: 420px; margin: auto; min-height: 480px; }
+  .larble-screen-search { top: 40px; right: 35px; width: 180px; }
+  .larble-screen-feed { top: 105px; left: 30px; width: 200px; }
+  .larble-showcase-caption { bottom: 16px; font-size: 11px; }
+  .larble-orbit { width: 300px; height: 300px; left: 35px; top: 75px; }
+}
+@media (max-width: 380px) {
+  .larble-copy { padding-left: 20px; padding-right: 20px; }
+  .larble-copy h2 { font-size: 36px; }
+  .larble-downloads { gap: 10px; }
+  .larble-downloads img { height: 38px; }
+  .larble-screen-search { width: 155px; right: 24px; }
+  .larble-screen-feed { width: 175px; left: 20px; }
+  .larble-showcase { min-height: 435px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .larble-downloads a { transition: none; }
+}
